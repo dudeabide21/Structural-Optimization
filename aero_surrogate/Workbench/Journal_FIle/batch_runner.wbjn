@@ -1,0 +1,78 @@
+# encoding: utf-8
+import os
+import time
+
+# === PATHS ===
+proj_path = r"C:\Users\dipes\OneDrive\Documents\Machine Learning\Python\Structural Optimization\aero_surrogate\Workbench\Blade_Body.wbpj"
+cases_dir = r"C:\Users\dipes\OneDrive\Documents\Machine Learning\Python\Structural Optimization\aero_surrogate\wsl\fea_cases"
+mech_script = r"C:\Users\dipes\OneDrive\Documents\Machine Learning\Python\Structural Optimization\aero_surrogate\Windows\scripts\mechanical_export.py"
+log_path = r"C:\Users\dipes\OneDrive\Documents\Machine Learning\Python\Structural Optimization\aero_surrogate\workbench\batch_run_log.txt"
+
+# --- LOGGER FUNCTION ---
+def log_message(message):
+    timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
+    with open(log_path, "a") as f:
+        f.write("[{0}] {1}\n".format(timestamp, message))
+    print(message)
+
+# Initialize Log
+log_message("--- NEW BATCH PROCESS STARTED ---")
+
+try:
+    Open(FilePath=proj_path)
+    log_message("Project opened successfully.")
+
+    # --- DYNAMIC SYSTEM FINDER ---
+    system = None
+    all_systems = GetAllSystems()
+    for s in all_systems:
+        if "Static Structural" in s.DisplayText or "SYS" in s.Name:
+            system = s
+            break
+    
+    if system is None:
+        system = all_systems[0]
+    log_message("Using System: {0}".format(system.DisplayText))
+
+    # Components
+    model_comp = system.GetContainer(ComponentName="Model")
+    sol_comp = system.GetComponent(Name="Solution")
+    geo_comp = system.GetContainer(ComponentName="Geometry")
+
+    # Read Mechanical Script
+    with open(mech_script, 'r') as f:
+        script_content = f.read()
+
+    # --- MAIN LOOP ---
+    for i in range(1, 6): # Change to range(1, 301) for full run
+        case = "case_{:04d}".format(i)
+        step = os.path.join(cases_dir, case, "blade_" + case + ".step")
+        
+        if os.path.exists(step):
+            try:
+                log_message("Starting {0}...".format(case))
+                
+                # 1. Update Geometry File
+                geo_comp.SetFile(FilePath=step)
+                
+                # 2. Solve
+                log_message("  Solving FEA...")
+                system.Update(AllDependencies=True)
+                
+                # 3. Export Data via Mechanical Script
+                log_message("  Exporting results...")
+                full_command = "case_label = '{0}'\n".format(case) + script_content
+                model_comp.SendCommand(Language="Python", Command=full_command)
+                
+                log_message("  {0} completed successfully.".format(case))
+                
+            except Exception as e:
+                log_message("  ERROR on {0}: {1}".format(case, str(e)))
+                continue # Skip to next case
+        else:
+            log_message("  SKIP: {0} path not found.".format(step))
+            
+    log_message("--- BATCH PROCESS FINISHED ---")
+
+except Exception as e:
+    log_message("CRITICAL FATAL ERROR: {0}".format(str(e)))
