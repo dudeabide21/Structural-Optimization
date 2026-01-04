@@ -1,0 +1,50 @@
+{
+  "dms25": {
+    "description": "Sweep control at span = 0.25 (delta_m)",
+    "span": 0.25,
+    "type": "sweep",
+    "baseline": 0.0,
+    "min": -0.01,
+    "max": 0.01
+  },
+  "dms50": {
+    "description": "Sweep control at span = 0.50 (delta_m)",
+    "span": 0.50,
+    "type": "sweep",
+    "baseline": 0.0,
+    "min": -0.01,
+    "max": 0.01
+  },
+  "dms100": {
+    "description": "Sweep control at span = 1.00 (delta_m)",
+    "span": 1.0,
+    "type": "sweep",
+    "baseline": 0.0,
+    "min": -0.01,
+    "max": 0.01
+  },
+  "dth25": {
+    "description": "Lean control at span = 0.25 (delta_theta, radians)",
+    "span": 0.25,
+    "type": "lean",
+    "baseline": 0.0,
+    "min": -0.05,
+    "max": 0.05
+  },
+  "dth50": {
+    "description": "Lean control at span = 0.50 (delta_theta, radians)",
+    "span": 0.50,
+    "type": "lean",
+    "baseline": 0.0,
+    "min": -0.05,
+    "max": 0.05
+  },
+  "dth100": {
+    "description": "Lean control at span = 1.00 (delta_theta, radians)",
+    "span": 1.0,
+    "type": "lean",
+    "baseline": 0.0,
+    "min": -0.05,
+    "max": 0.05
+  }
+}

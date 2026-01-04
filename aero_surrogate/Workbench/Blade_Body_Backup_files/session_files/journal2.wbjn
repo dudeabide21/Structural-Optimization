@@ -1,0 +1,18 @@
+# encoding: utf-8
+# 2025 R2
+SetScriptVersion(Version="25.2.170")
+system1 = GetSystem(Name="SYS")
+model1 = system1.GetContainer(ComponentName="Model")
+model1.Edit()
+engineeringData1 = system1.GetContainer(ComponentName="Engineering Data")
+material1 = engineeringData1.GetMaterial(Name="Ti-6Al-4V")
+matlProp1 = material1.CreateProperty(
+    Name="Tensile Yield Strength",
+    Qualifiers={"Definition": "", "Behavior": ""})
+matlProp1.SetData(
+    Index=-1,
+    Variables=["Tensile Yield Strength"],
+    Values=[["1100000000 [Pa]"]])
+Save(Overwrite=True)
+model1.Exit()
+Save(Overwrite=True)
