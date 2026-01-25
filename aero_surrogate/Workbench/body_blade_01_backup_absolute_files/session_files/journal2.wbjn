@@ -1,0 +1,94 @@
+# encoding: utf-8
+# 2025 R2
+SetScriptVersion(Version="25.2.170")
+library1 = EngData.OpenLibrary(
+    Name="General Materials",
+    Source="General_Materials.xml")
+EngData.EnableFilter(Enable=False)
+EngData.EnableFilter()
+EngData.EnableFilter(Enable=False)
+library2 = EngData.OpenLibrary(
+    Name="ANSYS GRANTA Materials Data for Simulation (Sample)",
+    Source="Granta_Design_Typical_Materials.xml")
+system1 = GetSystem(Name="SYS")
+engineeringData1 = system1.GetContainer(ComponentName="Engineering Data")
+matl1 = engineeringData1.ImportMaterial(
+    Name="Air",
+    Source="General_Materials.xml")
+matl2 = engineeringData1.ImportMaterial(
+    Name="Titanium Alloy",
+    Source="General_Materials.xml")
+matl3 = engineeringData1.ImportMaterial(
+    Name="Titanium Alloy",
+    Source="General_Materials.xml")
+modelComponent1 = system1.GetComponent(Name="Model")
+modelComponent1.Refresh()
+model1 = system1.GetContainer(ComponentName="Model")
+model1.Edit()
+template1 = GetTemplate(TemplateName="Correlation Matrix")
+system2 = template1.CreateSystem()
+system1.Update(AllDependencies=True)
+chart1 = Parameters.CreateParameterSummaryChart(Parameters=[])
+chart1.Delete()
+chart2 = Parameters.CreateParameterSummaryChart(Parameters=[])
+chart2.Delete()
+correlation1 = system2.GetContainer(ComponentName="Correlation")
+correlationModel1 = correlation1.GetModel()
+correlationModel1.SamplingType = "Custom"
+designPoint1 = Parameters.GetDesignPoint(Name="0")
+Parameters.ExportDesignPoints(DesignPoints=[designPoint1])
+template2 = GetTemplate(TemplateName="PDMSendTemplate")
+geometryComponent1 = system1.GetComponent(Name="Geometry")
+componentTemplate1 = GetComponentTemplate(Name="PDMSendTemplate")
+system3 = template2.CreateSystem(
+    DataTransferFrom=[Set(FromComponent=geometryComponent1, TransferName=None, ToComponentTemplate=componentTemplate1)],
+    RelativeTo=system1)
+system3 = GetSystem(Name="PDMSend")
+pDMSendComponent1 = system3.GetComponent(Name="PDMSend")
+pDMSendComponent1.AlwaysBePartOfDpUpdate = True
+pDMSend1 = system3.GetContainer(ComponentName="PDMSend")
+string1 = pDMSend1.DynSendCommand(
+    Command="CREATE_NODE",
+    Arguments=IronPython.Runtime.PythonDictionary)
+string2 = pDMSend1.DynSendCommand(Command="SAVE")
+string3 = pDMSend1.DynSendCommand(Command="CLOSE_SERVER")
+template3 = GetTemplate(
+    TemplateName="Steady-State Thermal",
+    Solver="ANSYS")
+componentTemplate2 = GetComponentTemplate(Name="GeometryCellTemplate")
+system4 = template3.CreateSystem(
+    DataTransferTo=[Set(FromComponentTemplate=componentTemplate2, TransferName=None, ToComponent=pDMSendComponent1)],
+    Position="Left",
+    RelativeTo=system3)
+system4.Delete()
+system3.Delete()
+template4 = GetTemplate(TemplateName="Direct Optimization")
+correlationComponent1 = system2.GetComponent(Name="Correlation")
+componentTemplate3 = GetComponentTemplate(Name="DXDirectOptimizationCellTemplate")
+system5 = template4.CreateSystem(
+    DataTransferFrom=[Set(FromComponent=correlationComponent1, TransferName="DesignPointsDataTransfer", ToComponentTemplate=componentTemplate3)],
+    RelativeTo=system2)
+parameter1 = Parameters.CreateParameter(
+    IsOutput=False,
+    DisplayText="static structural")
+system5.Delete()
+system2.Delete()
+parameter1.Delete()
+system6 = template1.CreateSystem()
+system7 = template1.CreateSystem()
+system6.Delete()
+system7.Delete()
+template5 = GetTemplate(TemplateName="3D ROM")
+system8 = template5.CreateSystem()
+system8.Delete()
+geometry1 = system1.GetContainer(ComponentName="Geometry")
+geometryProperties1 = geometry1.GetGeometryProperties()
+geometryProperties1.GeometryImportParameters = "CADImportParameterType_All"
+system9 = template4.CreateSystem()
+system9.Delete()
+Save(Overwrite=True)
+system1.Update(AllDependencies=True)
+Save(Overwrite=True)
+model1.Exit()
+model1.Edit()
+Save(Overwrite=True)

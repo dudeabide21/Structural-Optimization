@@ -1,4 +1,10 @@
-case,max_stress_Pa,volume_m3,mass_kg
-manual_test,0.427,0.0002,1.5716
-manual_test,0.427,0.0002,1.5716
-manual_test,156.5605,6.1e-05,0.2682
+case_label,step_file,max_von_mises_Pa,volume_m3,mass_kg,status
+blade_case_0001,C:\Users\dipes\OneDrive\Documents\Machine Learning\Python\Structural Optimization\aero_surrogate\FEA\cases\blade_case_0001.step,,,,"FAILED: '.wbpj' file extension may not be a valid Mechanical project file.
+   at Ansys.ACT.Automation.Mechanical.Project.LogAndThrow(String error)
+   at Ansys.ACT.Automation.Mechanical.Project._internalOpen(String filePath, Boolean resetArchiveData)"
+blade_case_0002,C:\Users\dipes\OneDrive\Documents\Machine Learning\Python\Structural Optimization\aero_surrogate\FEA\cases\blade_case_0002.step,,,,"FAILED: '.wbpj' file extension may not be a valid Mechanical project file.
+   at Ansys.ACT.Automation.Mechanical.Project.LogAndThrow(String error)
+   at Ansys.ACT.Automation.Mechanical.Project._internalOpen(String filePath, Boolean resetArchiveData)"
+blade_case_0003,C:\Users\dipes\OneDrive\Documents\Machine Learning\Python\Structural Optimization\aero_surrogate\FEA\cases\blade_case_0003.step,,,,"FAILED: '.wbpj' file extension may not be a valid Mechanical project file.
+   at Ansys.ACT.Automation.Mechanical.Project.LogAndThrow(String error)
+   at Ansys.ACT.Automation.Mechanical.Project._internalOpen(String filePath, Boolean resetArchiveData)"

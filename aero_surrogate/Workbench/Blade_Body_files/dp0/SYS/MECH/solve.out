@@ -106,15 +106,15 @@
   DISTRIBUTED MEMORY PARALLEL REQUESTED
        1 PARALLEL PROCESSES REQUESTED WITH SINGLE THREAD PER PROCESS
     TOTAL OF     1 CORES REQUESTED
-  INPUT FILE NAME              = C:\Users\dipes\OneDrive\Documents\Machine Learning\Python\Structural Optimization\aero_surrogate\Workbench\Temp\WB_dipes_44572_2\_ProjectScratch\Scr08EC\dummy.dat
-  OUTPUT FILE NAME             = C:\Users\dipes\OneDrive\Documents\Machine Learning\Python\Structural Optimization\aero_surrogate\Workbench\Temp\WB_dipes_44572_2\_ProjectScratch\Scr08EC\solve.out
+  INPUT FILE NAME              = C:\Users\dipes\OneDrive\Documents\Machine Learning\Python\Structural Optimization\aero_surrogate\Workbench\_ProjectScratch\Scr1857\dummy.dat
+  OUTPUT FILE NAME             = C:\Users\dipes\OneDrive\Documents\Machine Learning\Python\Structural Optimization\aero_surrogate\Workbench\_ProjectScratch\Scr1857\solve.out
   MEMORY REQUESTED (MB)        = 512         
   START-UP FILE MODE           = NOREAD
   STOP FILE MODE               = NOREAD
   DATABASE SIZE REQUESTED (MB) = 512         
 
  RELEASE= 2025 R2              BUILD= 25.2      UP20250519   VERSION=WINDOWS x64 
- CURRENT JOBNAME=file  21:30:33  DEC 30, 2025 CP=      0.078
+ CURRENT JOBNAME=file  07:29:46  JAN 25, 2026 CP=      0.141
 
 
  PARAMETER _DS_PROGRESS =     999.0000000    
@@ -125,10 +125,10 @@
 
  DO NOT WRITE ELEMENT RESULTS INTO DATABASE
 
- *GET  _WALLSTRT  FROM  ACTI  ITEM=TIME WALL  VALUE=  21.5091667    
+ *GET  _WALLSTRT  FROM  ACTI  ITEM=TIME WALL  VALUE=  7.49638889    
 
  TITLE= 
- wbnew--Static Structural (A5)                                                 
+ Blade_Body--Static Structural (A5)                                            
 
   ACT Extensions:
       LSDYNA, 2025.2
@@ -140,17 +140,17 @@
  SET PARAMETER DIMENSIONS ON  _WB_PROJECTSCRATCH_DIR
   TYPE=STRI  DIMENSIONS=      248        1        1
 
- PARAMETER _WB_PROJECTSCRATCH_DIR(1) = C:\Users\dipes\OneDrive\Documents\Machine Learning\Python\Structural Optimization\aero_surrogate\Workbench\Temp\WB_dipes_44572_2\_ProjectScratch\Scr08EC\
+ PARAMETER _WB_PROJECTSCRATCH_DIR(1) = C:\Users\dipes\OneDrive\Documents\Machine Learning\Python\Structural Optimization\aero_surrogate\Workbench\_ProjectScratch\Scr1857\
 
  SET PARAMETER DIMENSIONS ON  _WB_SOLVERFILES_DIR
   TYPE=STRI  DIMENSIONS=      248        1        1
 
- PARAMETER _WB_SOLVERFILES_DIR(1) = C:\Users\dipes\OneDrive\Documents\Machine Learning\Python\Structural Optimization\aero_surrogate\Workbench\Temp\WB_dipes_44572_2\wbnew_files\dp0\SYS\MECH\
+ PARAMETER _WB_SOLVERFILES_DIR(1) = C:\Users\dipes\OneDrive\Documents\Machine Learning\Python\Structural Optimization\aero_surrogate\Workbench\Blade_Body_files\dp0\SYS\MECH\
 
  SET PARAMETER DIMENSIONS ON  _WB_USERFILES_DIR
   TYPE=STRI  DIMENSIONS=      248        1        1
 
- PARAMETER _WB_USERFILES_DIR(1) = C:\Users\dipes\OneDrive\Documents\Machine Learning\Python\Structural Optimization\aero_surrogate\Workbench\Temp\WB_dipes_44572_2\wbnew_files\user_files\
+ PARAMETER _WB_USERFILES_DIR(1) = C:\Users\dipes\OneDrive\Documents\Machine Learning\Python\Structural Optimization\aero_surrogate\Workbench\Blade_Body_files\user_files\
  --- Data in consistent MKS units. See Solving Units in the help system for more
 
  MKS UNITS SPECIFIED FOR INTERNAL    
@@ -177,9 +177,9 @@
 
  *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2025 R2          25.2     ***
  Ansys Mechanical Enterprise Academic Student      
- 01055371  VERSION=WINDOWS x64   21:30:33  DEC 30, 2025 CP=      0.250
+ 01055371  VERSION=WINDOWS x64   07:29:47  JAN 25, 2026 CP=      0.438
 
- wbnew--Static Structural (A5)                                                 
+ Blade_Body--Static Structural (A5)                                            
 
 
 
@@ -196,8 +196,25 @@
  *********** Fixed Supports ***********
  *********** Define Pressure Using Surface Effect Elements "Pressure" **********
 
+ LIST DATA TABLE  BISO  FOR MATERIAL      1
 
- ***** ROUTINE COMPLETED *****  CP =         0.406
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2025 R2          25.2     ***
+ Ansys Mechanical Enterprise Academic Student      
+ 01055371  VERSION=WINDOWS x64   07:29:47  JAN 25, 2026 CP=      0.688
+
+ Blade_Body--Static Structural (A5)                                            
+
+
+
+               BiIso Pl (BISO) Table For Material     1
+
+               1           2           3           4           5           6   
+   Temps   20.000      204.00      427.00      538.00      815.00      944.00    
+ Yld Strs 0.10980E+10 0.84400E+09 0.66300E+09 0.52700E+09 0.60000E+08 0.21000E+08
+ Tang Mod 0.13320E+10 0.12070E+10 0.10330E+10 0.94300E+09 0.70800E+09 0.59600E+09
+
+
+ ***** ROUTINE COMPLETED *****  CP =         0.688
 
 
  --- Number of total nodes = 10078
@@ -208,7 +225,7 @@
  --- Number of condensed parts = 0
  --- Number of total elements = 39922
 
- *GET  _WALLBSOL  FROM  ACTI  ITEM=TIME WALL  VALUE=  21.5091667    
+ *GET  _WALLBSOL  FROM  ACTI  ITEM=TIME WALL  VALUE=  7.49638889    
  ****************************************************************************
  *************************    SOLUTION       ********************************
  ****************************************************************************
@@ -239,7 +256,10 @@
  NLDIAG: Nonlinear diagnostics CONT option is set to ON. 
          Writing frequency : each ITERATION.
 
- DO NOT SAVE ANY RESTART FILES AT ALL
+ DEFINE RESTART CONTROL FOR LOADSTEP LAST
+ AT FREQUENCY OF LAST AND NUMBER FOR OVERWRITE IS   -1
+
+ DELETE RESTART FILES OF ENDSTEP
  ****************************************************
  ******************* SOLVE FOR LS 1 OF 1 ****************
 
@@ -254,7 +274,7 @@
     19961 SELECTED ELEMENTS BY NSLE COMMAND.
 
  GENERATE SURFACE LOAD PRES ON SURFACE DEFINED BY ALL SELECTED NODES
- VALUES= 0.100000000      0.00000000    
+ VALUES=  1000000.00      0.00000000    
 
  NUMBER OF PRES ELEMENT FACE LOADS STORED =      19961
 
@@ -275,9 +295,11 @@
 
  PRINTOUT RESUMED BY /GOP
 
- USE       1 SUBSTEPS INITIALLY THIS LOAD STEP FOR ALL  DEGREES OF FREEDOM
+ USE AUTOMATIC TIME STEPPING THIS LOAD STEP
+
+ USE       5 SUBSTEPS INITIALLY THIS LOAD STEP FOR ALL  DEGREES OF FREEDOM
  FOR AUTOMATIC TIME STEPPING:
-   USE      1 SUBSTEPS AS A MAXIMUM
+   USE   1000 SUBSTEPS AS A MAXIMUM
    USE      1 SUBSTEPS AS A MINIMUM
 
  TIME=  1.0000    
@@ -315,6 +337,9 @@
  WRITE CONT ITEMS TO THE DATABASE WITH A FREQUENCY OF ALL 
    FOR ALL APPLICABLE ENTITIES
 
+
+ DO NOT INCLUDE STRAIN RATE EFFECT ON ANALYSIS FROM THIS LOAD STEP ONWARDS  (VISCOPLASTICITY/CREEP ANALYSIS).
+
  *GET  ANSINTER_  FROM  ACTI  ITEM=INT        VALUE=  0.00000000    
 
  *IF  ANSINTER_  ( =   0.00000     )  NE  
@@ -324,16 +349,22 @@
 
  *****  MAPDL SOLVE    COMMAND  *****
 
- *** WARNING ***                         CP =       0.578   TIME= 21:30:33
+ *** WARNING ***                         CP =       0.953   TIME= 07:29:48
  Element shape checking is currently inactive.  Issue SHPP,ON or         
  SHPP,WARN to reactivate, if desired.                                    
 
- *** NOTE ***                            CP =       0.688   TIME= 21:30:33
+ *** WARNING ***                         CP =       0.953   TIME= 07:29:48
+ Section ID set 1 (and possibly others), with only 1 layer and 3         
+ integration points, is associated with material plasticity.  The        
+ number of integration points will be changed to 5 for improved          
+ accuracy.                                                               
+
+ *** NOTE ***                            CP =       1.047   TIME= 07:29:48
  The model data was checked and warning messages were found.             
   Please review output or errors file (                                  
  C:\Users\dipes\OneDrive\Documents\Machine Learning\Python\Structural    
- Optimization\aero_surrogate\Workbench\Temp\WB_dipes_44572_2\_ProjectScr 
- ratch\Scr08EC\file.err ) for these warning messages.                    
+ Optimization\aero_surrogate\Workbench\_ProjectScratch\Scr1857\file.err  
+ ) for these warning messages.                                           
 
  *** SELECTION OF ELEMENT TECHNOLOGIES FOR APPLICABLE ELEMENTS ***
       --- GIVE SUGGESTIONS AND RESET THE KEY OPTIONS ---
@@ -349,9 +380,9 @@
 
  *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2025 R2          25.2     ***
  Ansys Mechanical Enterprise Academic Student      
- 01055371  VERSION=WINDOWS x64   21:30:33  DEC 30, 2025 CP=      0.703
+ 01055371  VERSION=WINDOWS x64   07:29:48  JAN 25, 2026 CP=      1.109
 
- wbnew--Static Structural (A5)                                                 
+ Blade_Body--Static Structural (A5)                                            
 
 
 
@@ -362,21 +393,27 @@
    ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
    OFFSET TEMPERATURE FROM ABSOLUTE ZERO . . . . .  273.15    
    EQUATION SOLVER OPTION. . . . . . . . . . . . .SPARSE             
+   PLASTIC MATERIAL PROPERTIES INCLUDED. . . . . .YES
+   NEWTON-RAPHSON OPTION . . . . . . . . . . . . .PROGRAM CHOSEN   
    GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
 
- *** WARNING ***                         CP =       0.719   TIME= 21:30:33
+ *** WARNING ***                         CP =       1.156   TIME= 07:29:49
  Material number 2 (used by element 19962) should normally have at least 
  one MP or one TB type command associated with it.  Output of energy by  
  material may not be available.                                          
 
- *** NOTE ***                            CP =       0.766   TIME= 21:30:34
+ *** NOTE ***                            CP =       1.266   TIME= 07:29:49
  The step data was checked and warning messages were found.              
   Please review output or errors file (                                  
  C:\Users\dipes\OneDrive\Documents\Machine Learning\Python\Structural    
- Optimization\aero_surrogate\Workbench\Temp\WB_dipes_44572_2\_ProjectScr 
- ratch\Scr08EC\file.err ) for these warning messages.                    
+ Optimization\aero_surrogate\Workbench\_ProjectScratch\Scr1857\file.err  
+ ) for these warning messages.                                           
 
- *** NOTE ***                            CP =       0.766   TIME= 21:30:34
+ *** NOTE ***                            CP =       1.266   TIME= 07:29:49
+ This nonlinear analysis defaults to using the full Newton-Raphson       
+ solution procedure.  This can be modified using the NROPT command.      
+
+ *** NOTE ***                            CP =       1.266   TIME= 07:29:49
  The conditions for direct assembly have been met.  No .emat or .erot    
  files will be produced.                                                 
 
@@ -384,8 +421,16 @@
 
    LOAD STEP NUMBER. . . . . . . . . . . . . . . .     1
    TIME AT END OF THE LOAD STEP. . . . . . . . . .  1.0000    
-   NUMBER OF SUBSTEPS. . . . . . . . . . . . . . .     1
+   AUTOMATIC TIME STEPPING . . . . . . . . . . . .    ON
+      INITIAL NUMBER OF SUBSTEPS . . . . . . . . .     5
+      MAXIMUM NUMBER OF SUBSTEPS . . . . . . . . .  1000
+      MINIMUM NUMBER OF SUBSTEPS . . . . . . . . .     1
+   MAXIMUM NUMBER OF EQUILIBRIUM ITERATIONS. . . .    15
    STEP CHANGE BOUNDARY CONDITIONS . . . . . . . .    NO
+   TERMINATE ANALYSIS IF NOT CONVERGED . . . . . .YES (EXIT)  
+   CONVERGENCE CONTROLS. . . . . . . . . . . . . .USE DEFAULTS
+   COPY INTEGRATION POINT VALUES TO NODE . . . . .YES, FOR ELEMENTS WITH
+                                                  ACTIVE MAT. NONLINEARITIES
    PRINT OUTPUT CONTROLS . . . . . . . . . . . . .NO PRINTOUT
    DATABASE OUTPUT CONTROLS
       ITEM     FREQUENCY   COMPONENT
@@ -402,14 +447,16 @@
 
 
  SOLUTION MONITORING INFO IS WRITTEN TO FILE= file.mntr                                                                                                                                                                                                                                                           
+ MAXIMUM NUMBER OF EQUILIBRIUM ITERATIONS HAS BEEN MODIFIED              
+  TO BE, NEQIT = 22, BY SOLUTION CONTROL LOGIC.                          
 
- *** NOTE ***                            CP =       1.250   TIME= 21:30:34
+ *** NOTE ***                            CP =       2.109   TIME= 07:29:50
  Predictor is ON by default for structural elements with rotational      
  degrees of freedom.  Use the PRED,OFF command to turn the predictor     
  OFF if it adversely affects the convergence.                            
 
 
- *** NOTE ***                            CP =       1.344   TIME= 21:30:34
+ *** NOTE ***                            CP =       2.188   TIME= 07:29:50
  The initial memory allocation (-m) has been exceeded.                   
   Supplemental memory allocations are being used.                        
 
@@ -418,26 +465,26 @@
 
    TOTAL RIGID BODY MASS MATRIX ABOUT ORIGIN
                Translational mass               |   Coupled translational/rotational mass
-         1.5418        0.0000        0.0000     |     0.0000       0.15815      -0.21413E-02
-         0.0000        1.5418        0.0000     |   -0.15815        0.0000       0.51163E-01
-         0.0000        0.0000        1.5418     |    0.21413E-02  -0.51163E-01    0.0000    
+        0.86510        0.0000        0.0000     |     0.0000       0.88740E-01  -0.12015E-02
+         0.0000       0.86510        0.0000     |   -0.88740E-01    0.0000       0.28708E-01
+         0.0000        0.0000       0.86510     |    0.12015E-02  -0.28708E-01    0.0000    
      ------------------------------------------ | ------------------------------------------
                                                 |         Rotational mass (inertia)
-                                                |    0.17498E-01   0.37420E-04  -0.54214E-02
-                                                |    0.37420E-04   0.19287E-01  -0.34821E-03
-                                                |   -0.54214E-02  -0.34821E-03   0.21529E-02
+                                                |    0.98185E-02   0.20997E-04  -0.30420E-02
+                                                |    0.20997E-04   0.10822E-01  -0.19538E-03
+                                                |   -0.30420E-02  -0.19538E-03   0.12080E-02
 
-   TOTAL MASS =  1.5418    
+   TOTAL MASS = 0.86510    
      The mass principal axes coincide with the global Cartesian axes
 
    CENTER OF MASS (X,Y,Z)=   0.33185E-01   0.13889E-02   0.10258    
 
    TOTAL INERTIA ABOUT CENTER OF MASS
-        0.12727E-02   0.10848E-03  -0.17322E-03
-        0.10848E-03   0.13666E-02  -0.12856E-03
-       -0.17322E-03  -0.12856E-03   0.45206E-03
+        0.71410E-03   0.60869E-04  -0.97196E-04
+        0.60869E-04   0.76682E-03  -0.72135E-04
+       -0.97196E-04  -0.72135E-04   0.25366E-03
 
-   PRINCIPAL INERTIAS =   0.12073E-02   0.14786E-02   0.40541E-03
+   PRINCIPAL INERTIAS =   0.67744E-03   0.82966E-03   0.22748E-03
    ORIENTATION VECTORS OF THE INERTIA PRINCIPAL AXES IN GLOBAL CARTESIAN
      ( 0.793,-0.604,-0.079) ( 0.581, 0.789,-0.197) ( 0.181, 0.110, 0.977) 
 
@@ -445,93 +492,141 @@
   *** MASS SUMMARY BY ELEMENT TYPE ***
 
   TYPE      MASS
-     1   1.54176    
+     1  0.865099    
 
  Range of element maximum matrix coefficients in global coordinates
- Maximum = 3.65770432E+11 at element 12112.                              
- Minimum = 6.36246121E+09 at element 2369.                               
+ Maximum = 1.921193948E+11 at element 12112.                             
+ Minimum = 3.412946454E+09 at element 2369.                              
 
    *** ELEMENT MATRIX FORMULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1     19961  SHELL181      2.781   0.000139
-        2     19961  SURF154       0.672   0.000034
- Time at end of element matrix formulation CP = 4.796875.                
+        1     19961  SHELL181      4.641   0.000232
+        2     19961  SURF154       1.016   0.000051
+ Time at end of element matrix formulation CP = 7.90625.                 
+
+ ALL CURRENT MAPDL DATA WRITTEN TO FILE NAME= file.rdb
+  FOR POSSIBLE RESUME FROM THIS POINT
+     FORCE CONVERGENCE VALUE  =   21.14      CRITERION=  0.1057    
+     MOMENT CONVERGENCE VALUE =   0.000      CRITERION=  0.5000E-04
 
  SPARSE MATRIX DIRECT SOLVER.
-  Number of equations =       59808,    Maximum wavefront =     42
+  Number of equations =       59958,    Maximum wavefront =     42
 
 
   Memory allocated on this process
   -------------------------------------------------------------------
-  Equation solver memory allocated                     =   168.082 MB
-  Equation solver memory required for in-core mode     =   161.260 MB
-  Equation solver memory required for out-of-core mode =    60.359 MB
-  Total (solver and non-solver) memory allocated       =   594.043 MB
+  Equation solver memory allocated                     =   168.074 MB
+  Equation solver memory required for in-core mode     =   161.257 MB
+  Equation solver memory required for out-of-core mode =    60.542 MB
+  Total (solver and non-solver) memory allocated       =   624.211 MB
 
- *** NOTE ***                            CP =       5.062   TIME= 21:30:38
+ *** NOTE ***                            CP =       8.391   TIME= 07:29:58
  The Sparse Matrix Solver is currently running in the in-core memory     
  mode.  This memory mode uses the most amount of memory in order to      
  avoid using the hard drive as much as possible, which most often        
  results in the fastest solution time.  This mode is recommended if      
  enough physical memory is present to accommodate all of the solver      
  data.                                                                   
- curEqn=  38435  totEqn=  59808 Job CP sec=      5.531
-      Factor Done=  50% Factor Wall sec=      0.348 rate=       6.8 GFlops
- curEqn=  59808  totEqn=  59808 Job CP sec=      5.766
-      Factor Done= 100% Factor Wall sec=      0.589 rate=       8.0 GFlops
- Sparse solver maximum pivot= 1.009336146E+11 at node 2915 UX.           
- Sparse solver minimum pivot= 3023.06322 at node 1760 ROTY.              
- Sparse solver minimum pivot in absolute value= 3023.06322 at node 1760  
+ curEqn=  38076  totEqn=  59958 Job CP sec=      8.922
+      Factor Done=  50% Factor Wall sec=      0.456 rate=       5.1 GFlops
+ curEqn=  59958  totEqn=  59958 Job CP sec=      9.297
+      Factor Done= 100% Factor Wall sec=      0.924 rate=       5.1 GFlops
+ Sparse solver maximum pivot= 5.313057832E+10 at node 2915 UX.           
+ Sparse solver minimum pivot= 2333.60024 at node 1455 ROTY.              
+ Sparse solver minimum pivot in absolute value= 2333.60024 at node 1455  
  ROTY.                                                                   
+     DISP CONVERGENCE VALUE   =  0.1271E-06  CRITERION=  0.6354E-08
+    EQUIL ITER   1 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.4111E-05
+     FORCE CONVERGENCE VALUE  =  0.2343E-10  CRITERION=  0.2175     <<< CONVERGED
+     MOMENT CONVERGENCE VALUE =  0.1821E-13  CRITERION=  0.1340E-02 <<< CONVERGED
+     DISP CONVERGENCE VALUE   =  0.2083E-18  CRITERION=  0.6897E-08 <<< CONVERGED
+      The calculated reference DISP CONVERGENCE VALUE   =  0.1271E-06
+       is less than MINREF (which can be modified on the CNVTOL command).
+    EQUIL ITER   2 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC = -0.3441E-17
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   2
 
    *** ELEMENT RESULT CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1     19961  SHELL181      3.594   0.000180
-        2     19961  SURF154       0.719   0.000036
+        1     19961  SHELL181      6.000   0.000301
+        2     19961  SURF154       0.844   0.000042
 
    *** NODAL LOAD CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1     19961  SHELL181      0.359   0.000018
+        1     19961  SHELL181      0.344   0.000017
         2     19961  SURF154       0.062   0.000003
- *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
- *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
+ *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      2
+ *** TIME =  0.200000         TIME INC =  0.200000    
+ *** AUTO STEP TIME:  NEXT TIME INC = 0.20000      UNCHANGED
+
+     FORCE CONVERGENCE VALUE  =  0.9286E-11  CRITERION=  0.4349    
+     MOMENT CONVERGENCE VALUE =  0.7349E-14  CRITERION=  0.2680E-02
+     DISP CONVERGENCE VALUE   =  0.5284E-21  CRITERION=  0.6897E-08 <<< CONVERGED
+    EQUIL ITER   1 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.5147E-19
+     FORCE CONVERGENCE VALUE  =  0.9343E-11  CRITERION=  0.4349     <<< CONVERGED
+     MOMENT CONVERGENCE VALUE =  0.7279E-14  CRITERION=  0.2680E-02 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+ *** LOAD STEP     1   SUBSTEP     2  COMPLETED.    CUM ITER =      3
+ *** TIME =  0.400000         TIME INC =  0.200000    
+ *** AUTO TIME STEP:  NEXT TIME INC = 0.30000      INCREASED (FACTOR = 1.5000)
+
+     FORCE CONVERGENCE VALUE  =  0.2322E-10  CRITERION=  0.7611    
+     MOMENT CONVERGENCE VALUE =  0.1735E-13  CRITERION=  0.4690E-02
+     DISP CONVERGENCE VALUE   =  0.1124E-20  CRITERION=  0.9531E-08 <<< CONVERGED
+    EQUIL ITER   1 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.8982E-19
+     FORCE CONVERGENCE VALUE  =  0.1677E-10  CRITERION=  0.7611     <<< CONVERGED
+     MOMENT CONVERGENCE VALUE =  0.1269E-13  CRITERION=  0.4690E-02 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+ *** LOAD STEP     1   SUBSTEP     3  COMPLETED.    CUM ITER =      4
+ *** TIME =  0.700000         TIME INC =  0.300000    
+ *** AUTO STEP TIME:  NEXT TIME INC = 0.30000      UNCHANGED
+
+     FORCE CONVERGENCE VALUE  =  0.3369E-10  CRITERION=   1.087    
+     MOMENT CONVERGENCE VALUE =  0.2547E-13  CRITERION=  0.6700E-02
+     DISP CONVERGENCE VALUE   =  0.4303E-20  CRITERION=  0.9531E-08 <<< CONVERGED
+    EQUIL ITER   1 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.1829E-18
+     FORCE CONVERGENCE VALUE  =  0.2311E-10  CRITERION=   1.087     <<< CONVERGED
+     MOMENT CONVERGENCE VALUE =  0.1870E-13  CRITERION=  0.6700E-02 <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   1
+ *** LOAD STEP     1   SUBSTEP     4  COMPLETED.    CUM ITER =      5
+ *** TIME =   1.00000         TIME INC =  0.300000    
 
 
  *** MAPDL BINARY FILE STATISTICS
   BUFFER SIZE USED= 16384
-       17.750 MB WRITTEN ON ASSEMBLED MATRIX FILE: file.full
-       24.125 MB WRITTEN ON RESULTS FILE: file.rst
+      398.625 MB WRITTEN ON ELEMENT SAVED DATA FILE: file.esav
+       17.812 MB WRITTEN ON ASSEMBLED MATRIX FILE: file.full
+       80.125 MB WRITTEN ON RESULTS FILE: file.rst
  *************** Write FE CONNECTORS *********
 
  WRITE OUT CONSTRAINT EQUATIONS TO FILE= file.ce                                                                                                                                                                                                                                                             
  ****************************************************
  *************** FINISHED SOLVE FOR LS 1 *************
 
- *GET  _WALLASOL  FROM  ACTI  ITEM=TIME WALL  VALUE=  21.5125000    
+ *GET  _WALLASOL  FROM  ACTI  ITEM=TIME WALL  VALUE=  7.53694444    
 
  PRINTOUT RESUMED BY /GOP
 
  FINISH SOLUTION PROCESSING
 
 
- ***** ROUTINE COMPLETED *****  CP =        11.234
+ ***** ROUTINE COMPLETED *****  CP =        98.000
 
 
 
  *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2025 R2          25.2     ***
  Ansys Mechanical Enterprise Academic Student      
- 01055371  VERSION=WINDOWS x64   21:30:45  DEC 30, 2025 CP=     11.250
+ 01055371  VERSION=WINDOWS x64   07:32:13  JAN 25, 2026 CP=     98.000
 
- wbnew--Static Structural (A5)                                                 
+ Blade_Body--Static Structural (A5)                                            
 
 
 
           ***** MAPDL RESULTS INTERPRETATION (POST1) *****
 
- *** NOTE ***                            CP =      11.250   TIME= 21:30:45
+ *** NOTE ***                            CP =      98.000   TIME= 07:32:13
  Reading results into the database (SET command) will update the current 
  displacement and force boundary conditions in the database with the     
  values from the results file for that load set.  Note that any          
@@ -549,21 +644,21 @@
  EXIT THE MAPDL POST1 DATABASE PROCESSOR
 
 
- ***** ROUTINE COMPLETED *****  CP =        11.266
+ ***** ROUTINE COMPLETED *****  CP =        98.000
 
 
 
  PRINTOUT RESUMED BY /GOP
 
- *GET  _WALLDONE  FROM  ACTI  ITEM=TIME WALL  VALUE=  21.5125000    
+ *GET  _WALLDONE  FROM  ACTI  ITEM=TIME WALL  VALUE=  7.53694444    
 
  PARAMETER _PREPTIME =     0.000000000    
 
- PARAMETER _SOLVTIME =     12.00000000    
+ PARAMETER _SOLVTIME =     146.0000000    
 
  PARAMETER _POSTTIME =     0.000000000    
 
- PARAMETER _TOTALTIM =     12.00000000    
+ PARAMETER _TOTALTIM =     146.0000000    
 
  *GET  _DLBRATIO  FROM  ACTI  ITEM=SOLU DLBR  VALUE=  0.00000000    
 
@@ -571,7 +666,7 @@
 
  *GET  _SSMODE   FROM  ACTI  ITEM=SOLU SSMM  VALUE=  2.00000000    
 
- *GET  _NDOFS    FROM  ACTI  ITEM=SOLU NDOF  VALUE=  59808.0000    
+ *GET  _NDOFS    FROM  ACTI  ITEM=SOLU NDOF  VALUE=  59958.0000    
 
  *GET  _SOL_END_TIME  FROM  ACTI  ITEM=SET  TIME  VALUE=  1.00000000    
 
@@ -586,18 +681,28 @@
  --- Element load balance ratio = 0
  --- Time to combine distributed files = 0
  --- Sparse memory mode = 2
- --- Number of DOF = 59808
+ --- Number of DOF = 59958
 
  EXIT MAPDL WITHOUT SAVING DATABASE
 
 
- NUMBER OF WARNING MESSAGES ENCOUNTERED=          2
+ NUMBER OF WARNING MESSAGES ENCOUNTERED=          3
  NUMBER OF ERROR   MESSAGES ENCOUNTERED=          0
+
+ *** WARNING ***                         CP =      98.125   TIME= 07:32:24
+ During this session the elapsed time exceeds the CPU time by 66%.  This 
+ often indicates either a lack of physical memory (RAM) required to      
+ efficiently handle this simulation or a particularly slow hard drive    
+ configuration.  This simulation can be expected to run faster on        
+ identical hardware if additional RAM or a faster hard drive             
+ configuration is made available.  For more details, please see the      
+ Mechanical APDL Performance Guide which is part of the Ansys Help       
+ system.                                                                 
 
 +--------------------- M A P D L   S T A T I S T I C S ------------------------+
 
 Release: 2025 R2            Build: 25.2       Update: UP20250519   Platform: WINDOWS x64 
-Date Run: 12/30/2025   Time: 21:30     Process ID: 7676
+Date Run: 01/25/2026   Time: 07:32     Process ID: 47460
 Operating System: Windows 11  (Build: 26200)
 
 Processor Model: 12th Gen Intel(R) Core(TM) i7-1250U
@@ -617,28 +722,28 @@ GPU Acceleration: Not Requested
 
 Job Name: file
 Input File: dummy.dat
-Working Directory: C:\Users\dipes\OneDrive\Documents\Machine Learning\Python\Structural Optimization\aero_surrogate\Workbench\Temp\WB_dipes_44572_2\_ProjectScratch\Scr08EC
+Working Directory: C:\Users\dipes\OneDrive\Documents\Machine Learning\Python\Structural Optimization\aero_surrogate\Workbench\_ProjectScratch\Scr1857
 
-Total CPU time for main thread                    :       11.6 seconds
-Total CPU time summed for all threads             :       11.3 seconds
+Total CPU time for main thread                    :       98.5 seconds
+Total CPU time summed for all threads             :       98.1 seconds
 
-Elapsed time spent obtaining a license            :        0.5 seconds
-Elapsed time spent pre-processing model (/PREP7)  :        0.2 seconds
-Elapsed time spent solution - preprocessing       :        0.8 seconds
-Elapsed time spent computing solution             :       10.3 seconds
+Elapsed time spent obtaining a license            :        0.6 seconds
+Elapsed time spent pre-processing model (/PREP7)  :        0.4 seconds
+Elapsed time spent solution - preprocessing       :        1.9 seconds
+Elapsed time spent computing solution             :      142.9 seconds
 Elapsed time spent solution - postprocessing      :        0.0 seconds
 Elapsed time spent post-processing model (/POST1) :        0.0 seconds
  
 Equation solver used                              :            Sparse (symmetric)
-Equation solver computational rate                :        7.4 Gflops
+Equation solver computational rate                :        5.4 Gflops
 
-Sum of disk space used on all processes           :       48.6 MB
+Sum of disk space used on all processes           :      682.5 MB
 
-Sum of memory used on all processes               :      251.0 MB
-Sum of memory allocated on all processes          :     1039.0 MB
+Sum of memory used on all processes               :      272.0 MB
+Sum of memory allocated on all processes          :     1071.0 MB
 Physical memory available                         :          8 GB
-Total amount of I/O written to disk               :        0.0 GB
-Total amount of I/O read from disk                :        0.0 GB
+Total amount of I/O written to disk               :        5.1 GB
+Total amount of I/O read from disk                :        6.1 GB
 
 +------------------ E N D   M A P D L   S T A T I S T I C S -------------------+
 
@@ -654,13 +759,13 @@ Total amount of I/O read from disk                :        0.0 GB
  |-----------------------------------------------------------------------------|
  |                                                                             |
  |  Database Requested(-db)      512 MB     Scratch Memory Requested     64 MB |
- |  Max Database Used(Master)     28 MB     Max Scratch Used(Master)    223 MB |
+ |  Max Database Used(Master)     28 MB     Max Scratch Used(Master)    244 MB |
  |  Max Database Used(Workers)     0 MB     Max Scratch Used(Workers)     0 MB |
- |  Sum Database Used(All)        28 MB     Sum Scratch Used(All)       223 MB |
+ |  Sum Database Used(All)        28 MB     Sum Scratch Used(All)       244 MB |
  |                                                                             |
  |-----------------------------------------------------------------------------|
  |                                                                             |
- |        CP Time      (sec) =         11.328       Time  =  21:30:55          |
- |        Elapsed Time (sec) =         28.000       Date  =  12/30/2025        |
+ |        CP Time      (sec) =         98.125       Time  =  07:32:24          |
+ |        Elapsed Time (sec) =        164.000       Date  =  01/25/2026        |
  |                                                                             |
  *-----------------------------------------------------------------------------*

@@ -1,0 +1,175 @@
+Event log opened 1/24/2026 2:51:03 PM Nepal Standard Time
+
+Product version: 2025 R2
+Build version: 25.2.0.0
+
+{1/24/2026 3:21:36 PM} [PostAddContainerToProject:Ansys.DesignXplorer.Commands.CreateCorrelationCellCommand] DesignXplorer is deprecated: we recommend using optiSLang containers.
+The DesignXplorer license (dsdxm license feature) enables comparable functionality for Correlation analysis, Design of Experiments, Response Surface modeling and Optimization.
+
+{1/24/2026 3:21:36 PM} [PostAddContainerToProject:Ansys.DesignXplorer.Commands.CreateCorrelationCellCommand] DesignXplorer is deprecated: we recommend using optiSLang containers.
+The DesignXplorer license (dsdxm license feature) enables comparable functionality for Correlation analysis, Design of Experiments, Response Surface modeling and Optimization.
+
+{1/24/2026 3:33:57 PM} [Ansys.Core.Commands.UserReadableFailureException:Message] Cannot import design points because the file is not valid. Click the 'Show Details' button to review the parsing errors.
+The file is not valid because of the following reasons:
+- line 1 is not a valid data header line.
+
+The file is not valid because of the following reasons:
+- line 1 is not a valid data header line.
+
+{1/24/2026 3:33:57 PM} [Ansys.Core.Commands.UserReadableFailureException:Message] Cannot import design points because the file is not valid. Click the 'Show Details' button to review the parsing errors.
+The file is not valid because of the following reasons:
+- line 1 is not a valid data header line.
+
+The file is not valid because of the following reasons:
+- line 1 is not a valid data header line.
+
+{1/24/2026 3:34:09 PM} [Ansys.Core.Commands.UserReadableFailureException:Message] Cannot import design points because the file is not valid. Click the 'Show Details' button to review the parsing errors.
+The file is not valid because of the following reasons:
+- line 1 is not a valid data header line.
+
+The file is not valid because of the following reasons:
+- line 1 is not a valid data header line.
+
+{1/24/2026 3:34:09 PM} [Ansys.Core.Commands.UserReadableFailureException:Message] Cannot import design points because the file is not valid. Click the 'Show Details' button to review the parsing errors.
+The file is not valid because of the following reasons:
+- line 1 is not a valid data header line.
+
+The file is not valid because of the following reasons:
+- line 1 is not a valid data header line.
+
+{1/24/2026 3:34:50 PM} [Ansys.Core.Commands.UserReadableFailureException:Message] Cannot import design points because the file is not valid. Click the 'Show Details' button to review the parsing errors.
+The file is not valid because of the following reasons:
+- line 1 is not a valid data header line.
+
+The file is not valid because of the following reasons:
+- line 1 is not a valid data header line.
+
+{1/24/2026 3:34:50 PM} [Ansys.Core.Commands.UserReadableFailureException:Message] Cannot import design points because the file is not valid. Click the 'Show Details' button to review the parsing errors.
+The file is not valid because of the following reasons:
+- line 1 is not a valid data header line.
+
+The file is not valid because of the following reasons:
+- line 1 is not a valid data header line.
+
+{1/24/2026 3:35:21 PM} [Ansys.Core.Commands.UserReadableFailureException:Message] Cannot import design points because the file is not valid. Click the 'Show Details' button to review the parsing errors.
+The file is not valid because of the following reasons:
+- line 2 is not a valid data header line.
+
+The file is not valid because of the following reasons:
+- line 2 is not a valid data header line.
+
+{1/24/2026 3:35:21 PM} [Ansys.Core.Commands.UserReadableFailureException:Message] Cannot import design points because the file is not valid. Click the 'Show Details' button to review the parsing errors.
+The file is not valid because of the following reasons:
+- line 2 is not a valid data header line.
+
+The file is not valid because of the following reasons:
+- line 2 is not a valid data header line.
+
+{1/24/2026 3:35:33 PM} [Ansys.Core.Commands.UserReadableFailureException:Message] Cannot import design points because the file is not valid. Click the 'Show Details' button to review the parsing errors.
+The file is not valid because of the following reasons:
+- line 2 is not a valid data header line.
+
+The file is not valid because of the following reasons:
+- line 2 is not a valid data header line.
+
+{1/24/2026 3:35:33 PM} [Ansys.Core.Commands.UserReadableFailureException:Message] Cannot import design points because the file is not valid. Click the 'Show Details' button to review the parsing errors.
+The file is not valid because of the following reasons:
+- line 2 is not a valid data header line.
+
+The file is not valid because of the following reasons:
+- line 2 is not a valid data header line.
+
+{1/24/2026 3:35:42 PM} [Ansys.Core.Commands.UserReadableFailureException:Message] Cannot import design points because the file is not valid. Click the 'Show Details' button to review the parsing errors.
+The file is not valid because of the following reasons:
+- line 2 is not a valid data header line.
+
+The file is not valid because of the following reasons:
+- line 2 is not a valid data header line.
+
+{1/24/2026 3:35:42 PM} [Ansys.Core.Commands.UserReadableFailureException:Message] Cannot import design points because the file is not valid. Click the 'Show Details' button to review the parsing errors.
+The file is not valid because of the following reasons:
+- line 2 is not a valid data header line.
+
+The file is not valid because of the following reasons:
+- line 2 is not a valid data header line.
+
+{1/24/2026 3:35:47 PM} [Ansys.Core.Commands.UserReadableFailureException:Message] Cannot import design points because the file is not valid. Click the 'Show Details' button to review the parsing errors.
+The file is not valid because of the following reasons:
+- line 2 is not a valid data header line.
+
+The file is not valid because of the following reasons:
+- line 2 is not a valid data header line.
+
+{1/24/2026 3:35:47 PM} [Ansys.Core.Commands.UserReadableFailureException:Message] Cannot import design points because the file is not valid. Click the 'Show Details' button to review the parsing errors.
+The file is not valid because of the following reasons:
+- line 2 is not a valid data header line.
+
+The file is not valid because of the following reasons:
+- line 2 is not a valid data header line.
+
+{1/24/2026 3:37:50 PM} [Ansys.Core.Commands.UserReadableFailureException:Message] Cannot import design points because the file is not valid. Click the 'Show Details' button to review the parsing errors.
+The file is not valid because of the following reasons:
+- line 2 is not a valid data header line.
+
+The file is not valid because of the following reasons:
+- line 2 is not a valid data header line.
+
+{1/24/2026 3:37:50 PM} [Ansys.Core.Commands.UserReadableFailureException:Message] Cannot import design points because the file is not valid. Click the 'Show Details' button to review the parsing errors.
+The file is not valid because of the following reasons:
+- line 2 is not a valid data header line.
+
+The file is not valid because of the following reasons:
+- line 2 is not a valid data header line.
+
+{1/24/2026 3:39:55 PM} [Ansys.Core.Commands.UserReadableFailureException:Message] Cannot import design points because the file is not valid. Click the 'Show Details' button to review the parsing errors.
+The file is not valid because of the following reasons:
+- line 2 is not a valid data header line.
+
+The file is not valid because of the following reasons:
+- line 2 is not a valid data header line.
+
+{1/24/2026 3:39:55 PM} [Ansys.Core.Commands.UserReadableFailureException:Message] Cannot import design points because the file is not valid. Click the 'Show Details' button to review the parsing errors.
+The file is not valid because of the following reasons:
+- line 2 is not a valid data header line.
+
+The file is not valid because of the following reasons:
+- line 2 is not a valid data header line.
+
+{1/24/2026 3:42:57 PM} [PostAddContainerToProject:Ansys.DesignXplorer.Commands.CreateDirectOptimizationCellCommand] DesignXplorer is deprecated: we recommend using optiSLang containers.
+The DesignXplorer license (dsdxm license feature) enables comparable functionality for Correlation analysis, Design of Experiments, Response Surface modeling and Optimization.
+
+{1/24/2026 3:42:57 PM} [PostAddContainerToProject:Ansys.DesignXplorer.Commands.CreateDirectOptimizationCellCommand] DesignXplorer is deprecated: we recommend using optiSLang containers.
+The DesignXplorer license (dsdxm license feature) enables comparable functionality for Correlation analysis, Design of Experiments, Response Surface modeling and Optimization.
+
+{1/24/2026 3:45:26 PM} [PostAddContainerToProject:Ansys.DesignXplorer.Commands.CreateCorrelationCellCommand] DesignXplorer is deprecated: we recommend using optiSLang containers.
+The DesignXplorer license (dsdxm license feature) enables comparable functionality for Correlation analysis, Design of Experiments, Response Surface modeling and Optimization.
+
+{1/24/2026 3:45:26 PM} [PostAddContainerToProject:Ansys.DesignXplorer.Commands.CreateCorrelationCellCommand] DesignXplorer is deprecated: we recommend using optiSLang containers.
+The DesignXplorer license (dsdxm license feature) enables comparable functionality for Correlation analysis, Design of Experiments, Response Surface modeling and Optimization.
+
+{1/24/2026 3:45:26 PM} [PostAddContainerToProject:Ansys.DesignXplorer.Commands.CreateCorrelationCellCommand] DesignXplorer is deprecated: we recommend using optiSLang containers.
+The DesignXplorer license (dsdxm license feature) enables comparable functionality for Correlation analysis, Design of Experiments, Response Surface modeling and Optimization.
+
+{1/24/2026 3:45:26 PM} [PostAddContainerToProject:Ansys.DesignXplorer.Commands.CreateCorrelationCellCommand] DesignXplorer is deprecated: we recommend using optiSLang containers.
+The DesignXplorer license (dsdxm license feature) enables comparable functionality for Correlation analysis, Design of Experiments, Response Surface modeling and Optimization.
+
+{1/24/2026 3:45:40 PM} [PostAddContainerToProject:Ansys.DesignXplorer.Commands.CreateDOECellForRomBuilderCommand] DesignXplorer is deprecated: we recommend using optiSLang containers.
+The DesignXplorer license (dsdxm license feature) enables comparable functionality for Correlation analysis, Design of Experiments, Response Surface modeling and Optimization.
+
+{1/24/2026 3:45:40 PM} [PostAddContainerToProject:Ansys.DesignXplorer.Commands.CreateDOECellForRomBuilderCommand] DesignXplorer is deprecated: we recommend using optiSLang containers.
+The DesignXplorer license (dsdxm license feature) enables comparable functionality for Correlation analysis, Design of Experiments, Response Surface modeling and Optimization.
+
+{1/24/2026 3:45:40 PM} [PostAddContainerToProject:Ansys.DesignXplorer.Commands.CreateCellCommand] DesignXplorer is deprecated: we recommend using optiSLang containers.
+The DesignXplorer license (dsdxm license feature) enables comparable functionality for Correlation analysis, Design of Experiments, Response Surface modeling and Optimization.
+
+{1/24/2026 3:45:40 PM} [PostAddContainerToProject:Ansys.DesignXplorer.Commands.CreateCellCommand] DesignXplorer is deprecated: we recommend using optiSLang containers.
+The DesignXplorer license (dsdxm license feature) enables comparable functionality for Correlation analysis, Design of Experiments, Response Surface modeling and Optimization.
+
+{1/24/2026 3:50:33 PM} [PostAddContainerToProject:Ansys.DesignXplorer.Commands.CreateDirectOptimizationCellCommand] DesignXplorer is deprecated: we recommend using optiSLang containers.
+The DesignXplorer license (dsdxm license feature) enables comparable functionality for Correlation analysis, Design of Experiments, Response Surface modeling and Optimization.
+
+{1/24/2026 3:50:33 PM} [PostAddContainerToProject:Ansys.DesignXplorer.Commands.CreateDirectOptimizationCellCommand] DesignXplorer is deprecated: we recommend using optiSLang containers.
+The DesignXplorer license (dsdxm license feature) enables comparable functionality for Correlation analysis, Design of Experiments, Response Surface modeling and Optimization.
+
+
+Event log closed 1/25/2026 7:08:29 AM Nepal Standard Time

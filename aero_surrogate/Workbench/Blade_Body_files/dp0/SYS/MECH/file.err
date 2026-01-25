@@ -1,10 +1,26 @@
-/COM,ANSYS RELEASE 2025 R2           BUILD 25.2      UP20250519       21:30:32
+/COM,ANSYS RELEASE 2025 R2           BUILD 25.2      UP20250519       07:29:46
 
- *** WARNING ***                         CP =       0.578   TIME= 21:30:33
+ *** WARNING ***                         CP =       0.953   TIME= 07:29:48
  Element shape checking is currently inactive.  Issue SHPP,ON or         
  SHPP,WARN to reactivate, if desired.                                    
 
- *** WARNING ***                         CP =       0.719   TIME= 21:30:33
+ *** WARNING ***                         CP =       0.953   TIME= 07:29:48
+ Section ID set 1 (and possibly others), with only 1 layer and 3         
+ integration points, is associated with material plasticity.  The        
+ number of integration points will be changed to 5 for improved          
+ accuracy.                                                               
+
+ *** WARNING ***                         CP =       1.156   TIME= 07:29:49
  Material number 2 (used by element 19962) should normally have at least 
  one MP or one TB type command associated with it.  Output of energy by  
  material may not be available.                                          
+
+ *** WARNING ***                         CP =      98.125   TIME= 07:32:24
+ During this session the elapsed time exceeds the CPU time by 66%.  This 
+ often indicates either a lack of physical memory (RAM) required to      
+ efficiently handle this simulation or a particularly slow hard drive    
+ configuration.  This simulation can be expected to run faster on        
+ identical hardware if additional RAM or a faster hard drive             
+ configuration is made available.  For more details, please see the      
+ Mechanical APDL Performance Guide which is part of the Ansys Help       
+ system.                                                                 

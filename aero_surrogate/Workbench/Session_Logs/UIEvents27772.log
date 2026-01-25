@@ -1,0 +1,81 @@
+Event log opened 1/25/2026 7:16:46 AM Nepal Standard Time
+
+Product version: 2025 R2
+Build version: 25.2.0.0
+
+{1/25/2026 7:20:33 AM} [Ansys.Core.Events.EventPublishFailedException:Ans.UI] An unexpected error has occurred: Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Ansys.EngineeringData.Gui.Operations.EditEngineeringData.BeginEdit(View view, DataContainerReference container)
+   at Ansys.EngineeringData.Gui.EventWorker.Receive(IEvent eventInfo)
+   at Ansys.UI.UIEventManager.HandleEventFiring(List`1 observers, IEvent eventInfo)
+--- Ansys.Core.Events.EventPublishFailedException: Object reference not set to an instance of an object.
+Event: 
+   at Ansys.UI.UIEventManager.HandleEventFiring(List`1 observers, IEvent eventInfo)
+   at Ansys.UI.UIEventManager.Publish(IEvent eventInfo, Boolean wait)
+   at Ansys.UI.UIManager.EndUITransaction(String source, Boolean coreTransaction)
+
+{1/25/2026 7:20:33 AM} [Ansys.Core.Events.EventPublishFailedException:Ans.UI] An unexpected error has occurred: Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Ansys.EngineeringData.Gui.Operations.EditEngineeringData.BeginEdit(View view, DataContainerReference container)
+   at Ansys.EngineeringData.Gui.EventWorker.Receive(IEvent eventInfo)
+   at Ansys.UI.UIEventManager.HandleEventFiring(List`1 observers, IEvent eventInfo)
+--- Ansys.Core.Events.EventPublishFailedException: Object reference not set to an instance of an object.
+Event: 
+   at Ansys.UI.UIEventManager.HandleEventFiring(List`1 observers, IEvent eventInfo)
+   at Ansys.UI.UIEventManager.Publish(IEvent eventInfo, Boolean wait)
+   at Ansys.UI.UIManager.EndUITransaction(String source, Boolean coreTransaction)
+
+{1/25/2026 7:20:55 AM} [Ansys.Core.Commands.UserReadableFailureException:Message] The following components need attention before proceeding:
+Engineering Data
+Ansys.Addins.Infrastructure.Exceptions.AddinUserException: The following components need attention before proceeding:
+Engineering Data
+   at Ansys.Simulation.Core.RefreshHelper.VerifyUpstreamContainerStatesValidForRefresh(IProtectedContext context, SourceContainerDictionary modifiedUpstreamContainers, ReadOnlyCollection`1 upstreamContainersToRefresh)
+   at Ansys.Simulation.GUI.Addin.VerifyUpstreamContainerStatesValidForRefreshForMultipleDownstreamContainers(IProtectedContext context, List`1 downstreamContainers)
+--- Ansys.Core.Commands.UserReadableFailureException: The following components need attention before proceeding:
+Engineering Data
+   at Ansys.Simulation.GUI.Addin.VerifyUpstreamContainerStatesValidForRefreshForMultipleDownstreamContainers(IProtectedContext context, List`1 downstreamContainers)
+   at Ansys.Simulation.GUI.EditModelBase.InvokeEditModelOperation(GuiOperationContext context, IGuiOperation guiOperation, DataContainerReference dcr)
+   at Ansys.UI.GuiOperationContext.Invoke(GuiOperationMetaData operationData)
+   at Ansys.UI.UIManager.InvokeOperationCore(String pseudoname, OperationDelegate callback, Boolean allowOSMessages, Boolean coreTransaction, Boolean deferredRefreshOnly)
+
+{1/25/2026 7:20:55 AM} [Ansys.Core.Commands.UserReadableFailureException:Message] The following components need attention before proceeding:
+Engineering Data
+Ansys.Addins.Infrastructure.Exceptions.AddinUserException: The following components need attention before proceeding:
+Engineering Data
+   at Ansys.Simulation.Core.RefreshHelper.VerifyUpstreamContainerStatesValidForRefresh(IProtectedContext context, SourceContainerDictionary modifiedUpstreamContainers, ReadOnlyCollection`1 upstreamContainersToRefresh)
+   at Ansys.Simulation.GUI.Addin.VerifyUpstreamContainerStatesValidForRefreshForMultipleDownstreamContainers(IProtectedContext context, List`1 downstreamContainers)
+--- Ansys.Core.Commands.UserReadableFailureException: The following components need attention before proceeding:
+Engineering Data
+   at Ansys.Simulation.GUI.Addin.VerifyUpstreamContainerStatesValidForRefreshForMultipleDownstreamContainers(IProtectedContext context, List`1 downstreamContainers)
+   at Ansys.Simulation.GUI.EditModelBase.InvokeEditModelOperation(GuiOperationContext context, IGuiOperation guiOperation, DataContainerReference dcr)
+   at Ansys.UI.GuiOperationContext.Invoke(GuiOperationMetaData operationData)
+   at Ansys.UI.UIManager.InvokeOperationCore(String pseudoname, OperationDelegate callback, Boolean allowOSMessages, Boolean coreTransaction, Boolean deferredRefreshOnly)
+
+{1/25/2026 7:21:26 AM} [Ansys.Core.Commands.UserReadableFailureException:Message] The following components need attention before proceeding:
+Engineering Data
+Ansys.Addins.Infrastructure.Exceptions.AddinUserException: The following components need attention before proceeding:
+Engineering Data
+   at Ansys.Simulation.Core.RefreshHelper.VerifyUpstreamContainerStatesValidForRefresh(IProtectedContext context, SourceContainerDictionary modifiedUpstreamContainers, ReadOnlyCollection`1 upstreamContainersToRefresh)
+   at Ansys.Simulation.GUI.Addin.VerifyUpstreamContainerStatesValidForRefreshForMultipleDownstreamContainers(IProtectedContext context, List`1 downstreamContainers)
+--- Ansys.Core.Commands.UserReadableFailureException: The following components need attention before proceeding:
+Engineering Data
+   at Ansys.Simulation.GUI.Addin.VerifyUpstreamContainerStatesValidForRefreshForMultipleDownstreamContainers(IProtectedContext context, List`1 downstreamContainers)
+   at Ansys.Simulation.GUI.EditModelBase.InvokeEditModelOperation(GuiOperationContext context, IGuiOperation guiOperation, DataContainerReference dcr)
+   at Ansys.UI.GuiOperationContext.Invoke(GuiOperationMetaData operationData)
+   at Ansys.UI.UIManager.InvokeOperationCore(String pseudoname, OperationDelegate callback, Boolean allowOSMessages, Boolean coreTransaction, Boolean deferredRefreshOnly)
+
+{1/25/2026 7:21:26 AM} [Ansys.Core.Commands.UserReadableFailureException:Message] The following components need attention before proceeding:
+Engineering Data
+Ansys.Addins.Infrastructure.Exceptions.AddinUserException: The following components need attention before proceeding:
+Engineering Data
+   at Ansys.Simulation.Core.RefreshHelper.VerifyUpstreamContainerStatesValidForRefresh(IProtectedContext context, SourceContainerDictionary modifiedUpstreamContainers, ReadOnlyCollection`1 upstreamContainersToRefresh)
+   at Ansys.Simulation.GUI.Addin.VerifyUpstreamContainerStatesValidForRefreshForMultipleDownstreamContainers(IProtectedContext context, List`1 downstreamContainers)
+--- Ansys.Core.Commands.UserReadableFailureException: The following components need attention before proceeding:
+Engineering Data
+   at Ansys.Simulation.GUI.Addin.VerifyUpstreamContainerStatesValidForRefreshForMultipleDownstreamContainers(IProtectedContext context, List`1 downstreamContainers)
+   at Ansys.Simulation.GUI.EditModelBase.InvokeEditModelOperation(GuiOperationContext context, IGuiOperation guiOperation, DataContainerReference dcr)
+   at Ansys.UI.GuiOperationContext.Invoke(GuiOperationMetaData operationData)
+   at Ansys.UI.UIManager.InvokeOperationCore(String pseudoname, OperationDelegate callback, Boolean allowOSMessages, Boolean coreTransaction, Boolean deferredRefreshOnly)
+
+
+Event log closed 1/25/2026 7:21:32 AM Nepal Standard Time

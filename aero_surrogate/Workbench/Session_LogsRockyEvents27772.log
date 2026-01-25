@@ -1,0 +1,3 @@
+2026-01-25 07:16:55.0803  @1   Info  BaseAddin => [BaseAddin.Load:0] Version= Ansys Rocky 25.2.0.1.
+2026-01-25 07:16:55.1419  @1   Info  BaseAddin => [BaseAddin.CreateTemplates:0] CreateTemplates= RockySystemTemplate.
+2026-01-25 07:16:55.1617  @22   Info  BaseAddin => [BaseAddin.Load:0] Image path= C:\Program Files\ANSYS Inc\ANSYS Student\v252\Addins\RockyAddin\Images.

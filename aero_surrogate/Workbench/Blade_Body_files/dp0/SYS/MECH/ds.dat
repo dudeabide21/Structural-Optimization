@@ -3,7 +3,7 @@
 *get,_wallstrt,active,,time,wall
 ! ANSYS input file written by Workbench version 2025 R2
 ! File used for geometry attach: C:\Users\dipes\OneDrive\Documents\Machine Learning\Python\fea_cases\case_0001\blade_case_0001.step
-/title,wbnew--Static Structural (A5)
+/title,Blade_Body--Static Structural (A5)
 ! ****** Begin Custom Load Command Snippet ******
 /COM, ACT Extensions:
 /COM,     LSDYNA, 2025.2
@@ -13,11 +13,11 @@
 /COM,
 ! ****** End   Custom Load Command Snippet ******
 *DIM,_wb_ProjectScratch_dir,string,248
-_wb_ProjectScratch_dir(1) = 'C:\Users\dipes\OneDrive\Documents\Machine Learning\Python\Structural Optimization\aero_surrogate\Workbench\Temp\WB_dipes_44572_2\_ProjectScratch\Scr08EC\'
+_wb_ProjectScratch_dir(1) = 'C:\Users\dipes\OneDrive\Documents\Machine Learning\Python\Structural Optimization\aero_surrogate\Workbench\_ProjectScratch\Scr1857\'
 *DIM,_wb_SolverFiles_dir,string,248
-_wb_SolverFiles_dir(1) = 'C:\Users\dipes\OneDrive\Documents\Machine Learning\Python\Structural Optimization\aero_surrogate\Workbench\Temp\WB_dipes_44572_2\wbnew_files\dp0\SYS\MECH\'
+_wb_SolverFiles_dir(1) = 'C:\Users\dipes\OneDrive\Documents\Machine Learning\Python\Structural Optimization\aero_surrogate\Workbench\Blade_Body_files\dp0\SYS\MECH\'
 *DIM,_wb_userfiles_dir,string,248
-_wb_userfiles_dir(1) = 'C:\Users\dipes\OneDrive\Documents\Machine Learning\Python\Structural Optimization\aero_surrogate\Workbench\Temp\WB_dipes_44572_2\wbnew_files\user_files\'
+_wb_userfiles_dir(1) = 'C:\Users\dipes\OneDrive\Documents\Machine Learning\Python\Structural Optimization\aero_surrogate\Workbench\Blade_Body_files\user_files\'
 /com,--- Data in consistent MKS units. See Solving Units in the help system for more information.
 /units,MKS
 /nopr
@@ -30090,17 +30090,152 @@ toffst,273.15,      ! Temperature offset from absolute zero
 tref,22.
 /wb,mat,start              !  starting to send materials
 /com,*********** Send Materials ***********
-Temperature = 'TEMP' ! Temperature
-MP,DENS,1,7850,	! kg m^-3
-MP,ALPX,1,1.2e-05,	! C^-1
-MP,C,1,434,	! J kg^-1 C^-1
-MP,KXX,1,60.5,	! W m^-1 C^-1
-MP,RSVX,1,1.7e-07,	! kg m^3 A^-2 s^-3
-MP,EX,1,200000000000,	! Pa
-MP,NUXY,1,0.3,
-MP,MURX,1,10000,
-MP,UVID,1,39507add-c243-4ab2-a3eb-c6cdff7f68e0
-MP,UMID,1,59002a79-71c2-428e-906b-55d7dbee100e
+MPTEMP,,,,,,,,
+MPTEMP,1,20
+MPTEMP,2,100
+MPTEMP,3,200
+MPTEMP,4,300
+MPTEMP,5,400
+MPTEMP,6,500
+MPTEMP,7,600
+MPTEMP,8,700
+MPTEMP,9,800
+MPTEMP,10,900
+MPTEMP,11,1000
+MPTEMP,12,1100
+MPTEMP,13,1200
+MPTEMP,14,1300
+MPTEMP,15,1400
+MPTEMP,16,1500
+MPTEMP,17,1600
+MPDATA,EX,1, ,107000000000,103400000000,99510000000,93710000000,85500000000,74710000000,
+MPDATA,EX,1, ,61840000000,48160000000,35290000000,24500000000,16290000000,10490000000,
+MPDATA,EX,1, ,6610000000,4106000000,2528000000,1547000000,943500000,	! Pa
+MPTEMP,,,,,,,,
+MPTEMP,,,,,,,,
+MPTEMP,1,20
+MPTEMP,2,100
+MPTEMP,3,200
+MPTEMP,4,300
+MPTEMP,5,400
+MPTEMP,6,500
+MPTEMP,7,600
+MPTEMP,8,700
+MPTEMP,9,800
+MPTEMP,10,900
+MPTEMP,11,1000
+MPTEMP,12,1100
+MPTEMP,13,1200
+MPTEMP,14,1300
+MPTEMP,15,1400
+MPTEMP,16,1500
+MPTEMP,17,1600
+MPDATA,NUXY,1, ,0.323,0.328,0.334,0.339,0.345,0.351,
+MPDATA,NUXY,1, ,0.357,0.363,0.369,0.374,0.38,0.386,
+MPDATA,NUXY,1, ,0.392,0.398,0.403,0.409,0.415,
+MPTEMP,,,,,,,,
+MPTEMP,,,,,,,,
+MPTEMP,1,20
+MPTEMP,2,100
+MPTEMP,3,200
+MPTEMP,4,300
+MPTEMP,5,400
+MPTEMP,6,500
+MPTEMP,7,600
+MPTEMP,8,700
+MPTEMP,9,800
+MPTEMP,10,900
+MPTEMP,11,1000
+MPTEMP,12,1100
+MPTEMP,13,1200
+MPTEMP,14,1300
+MPTEMP,15,1400
+MPTEMP,16,1500
+MPTEMP,17,1600
+MPTEMP,18,1650
+MPTEMP,19,1700
+MPTEMP,20,1800
+MPTEMP,21,1900
+MPTEMP,22,1950
+MPDATA,KXX,1, ,8.11,7.74,7.52,7.55,7.81,8.29,
+MPDATA,KXX,1, ,8.96,9.81,10.82,11.98,13.26,14.65,
+MPDATA,KXX,1, ,16.13,17.69,19.29,20.93,22.6,28.53,
+MPDATA,KXX,1, ,29.45,31.28,33.11,34.02,	! W m^-1 C^-1
+MPDATA,KYY,1, ,8.11,7.74,7.52,7.55,7.81,8.29,
+MPDATA,KYY,1, ,8.96,9.81,10.82,11.98,13.26,14.65,
+MPDATA,KYY,1, ,16.13,17.69,19.29,20.93,22.6,28.53,
+MPDATA,KYY,1, ,29.45,31.28,33.11,34.02,	! W m^-1 C^-1
+MPDATA,KZZ,1, ,7.01,7.34,8.02,8.95,10.07,11.36,
+MPDATA,KZZ,1, ,12.75,14.21,15.68,17.14,18.52,19.78,
+MPDATA,KZZ,1, ,20.88,21.77,22.42,22.76,22.76,28.53,
+MPDATA,KZZ,1, ,29.45,31.28,33.11,34.02,	! W m^-1 C^-1
+MPTEMP,,,,,,,,
+MPTEMP,,,,,,,,
+MPTEMP,1,-253.15
+MPTEMP,2,-173.15
+MPTEMP,3,-73.15
+MPTEMP,4,26.85
+MPTEMP,5,126.85
+MPTEMP,6,226.85
+MPTEMP,7,326.85
+MPTEMP,8,426.85
+MPTEMP,9,526.85
+MPTEMP,10,626.85
+MPTEMP,11,726.85
+MPTEMP,12,826.85
+MPTEMP,13,926.85
+MPTEMP,14,1026.85
+MPTEMP,15,1126.85
+MPTEMP,16,1226.85
+MPTEMP,17,1326.85
+MPTEMP,18,1376.85
+MPTEMP,19,1426.85
+MPTEMP,20,1526.85
+MPTEMP,21,1626.85
+MPTEMP,22,1676.85
+MPDATA,C,1, ,542.67348,552.065,565.86,581.575,598.82,617.205,
+MPDATA,C,1, ,636.34,655.835,675.3,694.345,712.58,729.615,
+MPDATA,C,1, ,745.06,758.525,769.62,777.955,783.14,830,
+MPDATA,C,1, ,830,830,830,830,	! J kg^-1 C^-1
+MPTEMP,,,,,,,,
+MPTEMP,,,,,,,,
+MPTEMP,1,-233.15
+MPTEMP,2,-173.15
+MPTEMP,3,19.85
+MPTEMP,4,126.85
+MPTEMP,5,326.85
+MPTEMP,6,526.85
+MPTEMP,7,626.86
+MPTEMP,8,826.86
+MPDATA,ALPX,1, ,6.5e-06,7.1e-06,8.9e-06,9.7e-06,1.08e-05,1.14e-05,
+MPDATA,ALPX,1, ,1.16e-05,1.16e-05,	! C^-1
+MPTEMP,,,,,,,,
+MPAMOD,1,19.85,	! C
+MPTEMP,,,,,,,,
+MPTEMP,1,20
+MPTEMP,2,1227
+MPTEMP,3,1777
+MPTEMP,4,1877
+MPTEMP,5,2127
+MPTEMP,6,2500
+MPDATA,DENS,1, ,4405,4243,4189,3865,3730,3730,	! kg m^-3
+MPTEMP,,,,,,,,
+
+TB,BISO,1,6,
+TBTEMP,20
+TBDATA,1,1098000000,1332000000
+TBTEMP,204
+TBDATA,1,844000000,1207000000
+TBTEMP,427
+TBDATA,1,663000000,1033000000
+TBTEMP,538
+TBDATA,1,527000000,943000000
+TBTEMP,815
+TBDATA,1,60000000,708000000
+TBTEMP,944
+TBDATA,1,21000000,596000000
+MP,UVID,1,d74b2adc-9aa7-4862-ba36-a8a7262d032b
+MP,UMID,1,49b950f9-259d-49ed-b3b3-f612c2ff6564
 
 /wb,mat,end                !  done sending materials
 /com,*********** Send Sheet Properties ***********
@@ -30109,7 +30244,7 @@ secdata,2.e-002
 secoff,mid
 
 !************************* Model Summary ********************
-!Open CASCADE STEP translator 7.9 1|Surface,	Structural Steel,	matid,	1
+!Open CASCADE STEP translator 7.9 1|Surface,	Ti-6Al-4V,	matid,	1
 !************************* End Model Summary ********************
 ! get the diagonal of the bounding box. Needed later for other things
 *get,_xmin,node,,mnloc,x
@@ -30150,22 +30285,19 @@ esel,all
 /golist
 /wb,load,start             !  starting to send loads
 /com,*********** Fixed Supports ***********
-CMBLOCK,_FIXEDSU,NODE,      110
+CMBLOCK,_FIXEDSU,NODE,       85
 (8i10)
-        19       280       306       310       316       318       369       372
-       391       395       402       405       412       416       423       428
-       435       441       460       461       512       516       598       601
-       611       616       708       711       718       721       765       769
-       786       791       835       840       888       892       900       904
-       925       930       965       970       995      1000      1042      1047
-      1059      1063      1084      1087      1098      1101      1111      1114
-      1124      1127      1137      1139      1163      1165      1177      1179
-      1216      1218      1257      1260      1272      1275      1300      1305
-      1314      1317      1324      1327      1335      1338      1346      1349
-      1366      1370      1389      1392      1400      1403      1411      1414
-      1435      1437      1455      1458      1475      1477      1485      1487
-      1494      1497      1524      1528      1580      1583      1616      1619
-      1651      1656      1834      2146      2154      4306
+         4         6        29        45        49        58        62        81
+        83        95        97       110       111       122       124       148
+       150       160       162       172       175       185       188       199
+       202       212       215       225       229       238       242       252
+       257       267       271       293       297       569       573       641
+       645       685       688      1150      1153      1190      1192      1203
+      1205      1230      1232      1242      1246      1285      1290      1508
+      1511      1541      1544      1562      1566      1599      1602      1632
+      1637      1671      1676      1700      1703      1729      1730      1743
+      1745      1757      1760      1772      1775      1787      1791      1803
+      1806      1816      1819      2206      2287
 cmsel,s,_FIXEDSU
 d,all,all
 nsel,all
@@ -50141,6 +50273,7 @@ esel,s,type,,2
 keyop,2,7,0         ! Use deformed area for application of load
 esel,all
 esel,all
+tblist
 /gst,on,on
 fini
 *get,_numnode,node,0,count
@@ -50171,18 +50304,19 @@ cncheck,dmp		!	Enable program controlled contact splitting for distributed memor
 dmpoption,emat,no             ! Don't combine emat file for DANSYS
 dmpoption,esav,no             ! Don't combine esav file for DANSYS
 nldiag,cont,iter           ! print out contact info each equilibrium iteration
-rescontrol,,none                 ! Do not keep any restart files
+rescontrol,define,last,last,,dele	   ! Program Controlled
 /com,****************************************************
 /com,******************* SOLVE FOR LS 1 OF 1 ****************
 esel,s,type,,2
 nsle
-sf,all,pres,0.1
+sf,all,pres,1000000.
 nsel,all
 esel,all
 esel,all
 /nopr
 /gopr
-nsub,1,1,1
+autots,on                  ! Workbench Program Controlled automatic time stepping
+nsub,5,1000,1              ! due to presence of nonlinear materials
 time,1.
 outres,erase
 outres,all,none
@@ -50195,6 +50329,7 @@ outres,strs,all,
 outres,epel,all,
 outres,eppl,all,
 outres,cont,all,
+RATE,OFF					  ! Creep is turned Off by the user
 ! *********** WB SOLVE COMMAND ***********
 ! check interactive state
 *get,ANSINTER_,active,,int
